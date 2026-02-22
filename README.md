@@ -1,6 +1,6 @@
 # 🧠 Memory App — Répétition Espacée
 
-🚀 **Application en ligne :** [https://memory-app-opal-eight.vercel.app](https://memory-app-opal-eight.vercel.app)
+🚀 **Application en ligne :** [https://memory-app-opal-eight.vercel.app/#/](https://memory-app-opal-eight.vercel.app/#/)
 
 Application web de mémorisation par **répétition espacée** (Spaced Repetition System). Créez des catégories, des thèmes et des flashcards, puis révisez-les avec un algorithme qui optimise votre apprentissage.
 
