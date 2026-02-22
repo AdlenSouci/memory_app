@@ -1,0 +1,391 @@
+{
+  "categories": [
+    {
+      "id": "cat1",
+      "name": "Informatique"
+    },
+    {
+      "id": "cat2",
+      "name": "Culture & Loisirs"
+    },
+    {
+      "id": "cat3",
+      "name": "Langues"
+    }
+  ],
+  "themes": [
+    {
+      "id": "1",
+      "categoryId": "cat1",
+      "titre": "Développement Web",
+      "maxLevel": 7,
+      "newCardsPerDay": 10
+    },
+    {
+      "id": "2",
+      "categoryId": "cat1",
+      "titre": "Bases de données",
+      "maxLevel": 7,
+      "newCardsPerDay": 10
+    },
+    {
+      "id": "3",
+      "categoryId": "cat1",
+      "titre": "Cybersécurité",
+      "maxLevel": 7,
+      "newCardsPerDay": 10
+    },
+    {
+      "id": "4",
+      "categoryId": "cat1",
+      "titre": "Réseaux",
+      "maxLevel": 7,
+      "newCardsPerDay": 10
+    },
+    {
+      "id": "5",
+      "categoryId": "cat2",
+      "titre": "Jeux Vidéo",
+      "maxLevel": 7,
+      "newCardsPerDay": 10
+    },
+    {
+      "id": "6",
+      "categoryId": "cat2",
+      "titre": "Pokémon",
+      "maxLevel": 7,
+      "newCardsPerDay": 10
+    },
+    {
+      "id": "7",
+      "categoryId": "cat2",
+      "titre": "Cinéma",
+      "maxLevel": 7,
+      "newCardsPerDay": 10
+    },
+    {
+      "id": "8",
+      "categoryId": "cat3",
+      "titre": "Anglais (Verbes irréguliers)",
+      "maxLevel": 7,
+      "newCardsPerDay": 20
+    }
+  ],
+  "cards": [
+    {
+      "id": "1",
+      "themeId": "1",
+      "recto": "Que signifie HTML ?",
+      "verso": "HyperText Markup Language",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "2",
+      "themeId": "1",
+      "recto": "Que signifie CSS ?",
+      "verso": "Cascading Style Sheets",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "3",
+      "themeId": "1",
+      "recto": "Quel est le rôle de JavaScript ?",
+      "verso": "Rendre les pages web interactives et dynamiques.",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "4",
+      "themeId": "1",
+      "recto": "Qu'est-ce que le DOM ?",
+      "verso": "Document Object Model - représentation arborescente de la page HTML.",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "5",
+      "themeId": "1",
+      "recto": "Différence entre id et class ?",
+      "verso": "id est unique, class peut être utilisé plusieurs fois.",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "6",
+      "themeId": "1",
+      "recto": "Qu'est-ce qu'une promesse (Promise) ?",
+      "verso": "Un objet représentant la réussite ou l'échec éventuel d'une opération asynchrone.",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "7",
+      "themeId": "2",
+      "recto": "Que signifie SQL ?",
+      "verso": "Structured Query Language",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "8",
+      "themeId": "2",
+      "recto": "Qu'est-ce qu'une table ?",
+      "verso": "Une collection de données organisées en lignes et colonnes.",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "9",
+      "themeId": "2",
+      "recto": "Qu'est-ce qu'une clé primaire ?",
+      "verso": "Identifiant unique pour chaque enregistrement.",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "10",
+      "themeId": "2",
+      "recto": "Différence SQL vs NoSQL ?",
+      "verso": "SQL = relationnel, tables fixes. NoSQL = non-relationnel, flexible (documents, graphes).",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "11",
+      "themeId": "3",
+      "recto": "Qu'est-ce que le Phishing ?",
+      "verso": "Hameçonnage - technique frauduleuse pour récupérer des infos sensibles.",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "12",
+      "themeId": "3",
+      "recto": "Qu'est-ce qu'un Ransomware ?",
+      "verso": "Logiciel malveillant qui chiffre les données et demande une rançon.",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "13",
+      "themeId": "3",
+      "recto": "Que signifie VPN ?",
+      "verso": "Virtual Private Network - réseau privé virtuel sécurisé.",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "14",
+      "themeId": "3",
+      "recto": "Qu'est-ce que l'attaque Man-in-the-Middle ?",
+      "verso": "Interception des communications entre deux parties sans qu'elles le sachent.",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "15",
+      "themeId": "4",
+      "recto": "Que signifie IP ?",
+      "verso": "Internet Protocol",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "16",
+      "themeId": "4",
+      "recto": "Que signifie DNS ?",
+      "verso": "Domain Name System - traduit les noms de domaine en adresses IP.",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "17",
+      "themeId": "4",
+      "recto": "Différence TCP vs UDP ?",
+      "verso": "TCP = fiable, connexion. UDP = rapide, sans connexion (streaming, jeux).",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "18",
+      "themeId": "5",
+      "recto": "Héros de Zelda ?",
+      "verso": "Link",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "19",
+      "themeId": "5",
+      "recto": "Plombier célèbre ?",
+      "verso": "Mario",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "20",
+      "themeId": "5",
+      "recto": "FPS créé par Valve ?",
+      "verso": "Half-Life ou Counter-Strike",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "21",
+      "themeId": "5",
+      "recto": "Jeu le plus vendu ?",
+      "verso": "Minecraft",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "22",
+      "themeId": "6",
+      "recto": "Pokémon 001 ?",
+      "verso": "Bulbizarre",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "23",
+      "themeId": "6",
+      "recto": "Pokémon 025 ?",
+      "verso": "Pikachu",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "24",
+      "themeId": "6",
+      "recto": "Évolution de Salamèche ?",
+      "verso": "Reptincel puis Dracaufeu",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "25",
+      "themeId": "6",
+      "recto": "Type de Evoli ?",
+      "verso": "Normal",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "26",
+      "themeId": "7",
+      "recto": "Réalisateur de Inception ?",
+      "verso": "Christopher Nolan",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "27",
+      "themeId": "7",
+      "recto": "Acteur principal de Matrix ?",
+      "verso": "Keanu Reeves",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "28",
+      "themeId": "7",
+      "recto": "Film avec un requin géant (1975) ?",
+      "verso": "Les Dents de la mer (Jaws)",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "29",
+      "themeId": "8",
+      "recto": "Be (prétérit)",
+      "verso": "Was/Were",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "30",
+      "themeId": "8",
+      "recto": "Become (prétérit)",
+      "verso": "Became",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "31",
+      "themeId": "8",
+      "recto": "Begin (prétérit)",
+      "verso": "Began",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "32",
+      "themeId": "8",
+      "recto": "Break (prétérit)",
+      "verso": "Broke",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "33",
+      "themeId": "8",
+      "recto": "Bring (prétérit)",
+      "verso": "Brought",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "34",
+      "themeId": "8",
+      "recto": "Build (prétérit)",
+      "verso": "Built",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    },
+    {
+      "id": "35",
+      "themeId": "8",
+      "recto": "Buy (prétérit)",
+      "verso": "Bought",
+      "rectoType": "text",
+      "versoType": "text",
+      "niveau": 1
+    }
+  ]
+}

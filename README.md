@@ -39,25 +39,25 @@ npm run dev
 
 # Build de production
 npm run build
-npx serve dist -l 4173
-# → http://localhost:4173
+npm run preview
+# → Ouvrir l'URL indiquée par Vite (généralement http://localhost:4173)
 ```
 
 ### 📴 Utiliser l'application hors-ligne (sans connexion internet)
 
-L'application intègre un **Service Worker** (technologie PWA) qui permet de l'utiliser **entièrement sans connexion** après la première visite.
+L'application intègre un **Service Worker** (technologie PWA) qui permet de l'utiliser **entièrement sans connexion** après la première visite sur votre navigateur.
 
-**Comment faire :**
+**Comment tester l'application sans connexion :**
 
-1. Lancer le build de production :
+1. Lancer la version de production (le mode hors-ligne ne marche pas en developpement) :
    ```bash
    npm run build
-   npx serve dist -l 4173
+   npm run preview
    ```
-2. Ouvrir `http://localhost:4173` dans Chrome/Firefox
-3. Naviguer sur quelques pages — le Service Worker met en cache automatiquement toute l'application
-4. **Couper le wifi / la connexion**
-5. Recharger la page → l'application fonctionne toujours ✅
+2. **ÉTAPE IMPORTANTE** : Le terminal va afficher une adresse (ex: `http://localhost:4173`). Ouvrez un navigateur (Chrome, Safari, Firefox) et allez sur cette adresse **pendant que vous avez toujours une connexion internet**.
+3. Naviguez sur quelques pages (ex: créez un thème ou modifiez-le). En arrière-plan, le navigateur télécharge secrètement l'application.
+4. **Coupez votre Wi-Fi / débranchez votre câble internet**. 
+5. Actualisez la page (F5) → L'application s'affiche et fonctionne toujours parfaitement ✅ !
 
 > 💡 Toutes les données (cartes, catégories, score) sont sauvegardées dans le **localStorage** du navigateur — elles persistent même hors-ligne et après redémarrage du navigateur.
 
@@ -464,10 +464,14 @@ L'application est configurée comme une **Progressive Web App (PWA)**. Elle peut
 3. **Manifeste** : Le fichier `manifest.webmanifest` permet l'installation sur mobile et bureau comme une application native.
 
 ### Comment tester le mode hors-ligne ?
-1. Générer le build de production : `npm run build`
-2. Lancer le serveur local : `npx serve dist -l 4173`
-3. Ouvrir l'application, puis dans les outils de développement Chrome (F12) -> Onglet **Application** -> **Service Workers** -> Cocher **Offline**.
-4. Actualiser la page : l'application fonctionne toujours !
+1. Générer le build de production et lancer le serveur :
+   ```bash
+   npm run build
+   npm run preview
+   ```
+2. Ouvrez l'application à l'adresse indiquée dans votre terminal (ex: `http://localhost:4173`) pendant que vous avez une connexion.
+3. Astuce développeur : dans les outils de développement Chrome (F12) -> Onglet **Application** -> **Service Workers** -> Cocher **Offline**. (Sinon, coupez simplement le Wi-Fi de votre ordinateur).
+4. Actualisez la page : l'application fonctionne toujours depuis le cache local !
 
 
 **FunkyFy** (outil de visualisation d'accessibilité) :

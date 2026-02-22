@@ -1,0 +1,52 @@
+{
+  "name": "vue_work",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:unit": "vitest",
+    "test:e2e": "cypress run --browser electron",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --noEmit --skipLibCheck"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1",
+    "pinia": "^3.0.4",
+    "vue": "^3.5.27",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@cypress/vue": "^6.0.2",
+    "@storybook/addon-essentials": "^8.6.0",
+    "@storybook/addon-interactions": "^8.6.0",
+    "@storybook/blocks": "^8.6.0",
+    "@storybook/test": "^8.6.0",
+    "@storybook/vue3": "^8.6.0",
+    "@storybook/vue3-vite": "^8.6.0",
+    "@tsconfig/node24": "^24.0.4",
+    "@types/node": "^24.10.9",
+    "@vitejs/plugin-vue": "^6.0.3",
+    "@vue/test-utils": "^2.4.6",
+    "@vue/tsconfig": "^0.8.1",
+    "cypress": "^14.5.4",
+    "jsdom": "^24.0.0",
+    "npm-run-all2": "^6.1.2",
+    "start-server-and-test": "^2.1.3",
+    "storybook": "^8.6.0",
+    "typescript": "~5.3.0",
+    "vite": "^5.1.0",
+    "vite-plugin-pwa": "^0.19.0",
+    "vite-plugin-vue-devtools": "^7.0.0",
+    "vitest": "^1.3.0",
+    "vue-tsc": "^2.0.0"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  }
+}
