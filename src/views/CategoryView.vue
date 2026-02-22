@@ -57,18 +57,18 @@ function deleteThisCategory() {
       <!-- En-tête -->
       <div class="d-flex justify-content-between align-items-center mb-5 flex-wrap gap-3">
         <div class="d-flex align-items-center gap-3">
-          <RouterLink to="/" class="btn btn-white shadow-sm rounded-circle p-2 text-dark border-0" style="width: 40px; height: 40px; display: grid; place-items: center;" aria-label="Retour à l'accueil">
+          <RouterLink to="/" class="btn btn-light bg-white shadow-sm rounded-circle p-2 text-dark border-0" style="width: 40px; height: 40px; display: grid; place-items: center;" aria-label="Retour à l'accueil">
             <i class="bi bi-arrow-left" aria-hidden="true"></i>
           </RouterLink>
           <h1 class="h2 mb-0 fw-bold text-dark">{{ category.name }}</h1>
         </div>
         
         <div class="btn-group shadow-sm">
-           <button @click="showAddTheme = !showAddTheme" class="btn btn-primary" aria-label="Ajouter un nouveau thème">
+           <button @click="showAddTheme = !showAddTheme" class="btn btn-primary fw-bold" aria-label="Ajouter un nouveau thème">
              <i class="bi bi-plus-lg me-2" aria-hidden="true"></i>Nouveau Thème
            </button>
-           <button @click="deleteThisCategory" class="btn btn-white text-danger border" aria-label="Supprimer cette catégorie">
-             <i class="bi bi-trash" aria-hidden="true"></i>
+           <button @click="deleteThisCategory" class="btn btn-danger fw-bold" aria-label="Supprimer cette catégorie">
+             <i class="bi bi-trash me-2" aria-hidden="true"></i> Supprimer la catégorie
            </button>
         </div>
       </div>
@@ -86,7 +86,6 @@ function deleteThisCategory() {
         </div>
       </Transition>
 
-      <!-- Grille des thèmes -->
       <div v-if="store.themes.filter(t => t.categoryId === categoryId).length > 0" class="row g-4">
         <div v-for="theme in store.themes.filter(t => t.categoryId === categoryId)" :key="theme.id" class="col-md-6 col-lg-4">
           <div class="card h-100 border-0 shadow-sm hover-elevate transition-all">
@@ -113,16 +112,15 @@ function deleteThisCategory() {
                     </button>
                   </div>
                 </div>
-                <h2 v-else class="h5 card-title mb-0 fw-bold text-dark">{{ theme.titre }}</h2>
+                <h2 v-else class="h5 card-title mb-0 fw-bold text-dark text-truncate pe-2">{{ theme.titre }}</h2>
                 
-                <div v-if="editingThemeId !== theme.id" class="dropdown">
-                  <button class="btn btn-link text-muted p-0" type="button" data-bs-toggle="dropdown" :aria-label="'Actions pour ' + theme.titre">
-                    <i class="bi bi-three-dots-vertical" aria-hidden="true"></i>
+                <div v-if="editingThemeId !== theme.id" class="d-flex gap-2 flex-shrink-0">
+                  <button @click="startEditTheme(theme.id, theme.titre)" class="btn btn-sm btn-outline-primary px-2" aria-label="Modifier le thème">
+                    <i class="bi bi-pencil" aria-hidden="true"></i>
                   </button>
-                  <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0">
-                    <li><button class="dropdown-item" @click="startEditTheme(theme.id, theme.titre)"><i class="bi bi-pencil me-2" aria-hidden="true"></i>Modifier</button></li>
-                    <li><button class="dropdown-item text-danger" @click="store.deleteTheme(theme.id)"><i class="bi bi-trash me-2" aria-hidden="true"></i>Supprimer</button></li>
-                  </ul>
+                  <button @click="store.deleteTheme(theme.id)" class="btn btn-sm btn-outline-danger px-2" aria-label="Supprimer le thème">
+                    <i class="bi bi-trash" aria-hidden="true"></i>
+                  </button>
                 </div>
               </div>
 

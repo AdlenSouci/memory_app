@@ -63,6 +63,13 @@ L'application intègre un **Service Worker** (technologie PWA) qui permet de l'u
 
 > 💡 Toutes les données (cartes, catégories, score) sont sauvegardées dans le **localStorage** du navigateur — elles persistent même hors-ligne et après redémarrage du navigateur.
 
+> ⚠️ **Note Importante pour les tests (Cache PWA)** : 
+> L'application utilise un Service Worker agressif pour fonctionner hors-ligne. Si vous relancez `npm run build` et que vos modifications n'apparaissent pas sur `npm run preview`, c'est normal : le navigateur affiche l'ancienne version en cache.
+> **Pour forcer la mise à jour :**
+> - Faites un rafraîchissement forcé : `Ctrl + F5` (ou `Cmd + Shift + R` sur Mac)
+> - OU ouvrez l'application dans une fenêtre de Navigation Privée.
+> - OU allez dans devtools (F12) > Application > Stockage > "Effacer les données du site".
+
 > ⚠️ Le mode développement (`npm run dev`) ne supporte **pas** le hors-ligne. Utiliser uniquement le build de production pour cette fonctionnalité.
 
 ---

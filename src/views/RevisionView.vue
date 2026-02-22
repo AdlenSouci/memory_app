@@ -120,7 +120,53 @@ function exitReviewMode() {
 <template>
   <div class="container py-5 text-center">
     
-    <div v-if="currentCard && !isFinished">
+    <!-- Mode Consultation -->
+    <div v-if="reviewMode && currentCard" class="review-mode">
+      <div class="mb-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h2 class="h3 fw-bold text-dark mb-0">Consultation : {{ theme?.titre }}</h2>
+          <button @click="exitReviewMode" class="btn btn-sm btn-outline-secondary" aria-label="Fermer la consultation">
+            <i class="bi bi-x-lg" aria-hidden="true"></i> Fermer
+          </button>
+        </div>
+        
+        <div class="d-flex align-items-center gap-3 justify-content-center">
+          <button @click="prevCardInReview" :disabled="currentIndex === 0" class="btn btn-outline-primary" aria-label="Carte précédente">
+            <i class="bi bi-chevron-left" aria-hidden="true"></i>
+          </button>
+          <span class="fw-bold">{{ currentIndex + 1 }} / {{ allThemeCards.length }}</span>
+          <button @click="nextCardInReview" :disabled="currentIndex === allThemeCards.length - 1" class="btn btn-outline-primary" aria-label="Carte suivante">
+            <i class="bi bi-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <div class="card shadow-lg border-0 p-4">
+            <div class="mb-3">
+              <span class="badge bg-primary">Niveau {{ currentCard.niveau }}</span>
+            </div>
+            <div class="text-uppercase text-muted fw-bold mb-2" style="font-size: 0.9rem;">Question</div>
+            <h3 class="h4 mb-4">{{ currentCard.recto }}</h3>
+            <div class="text-uppercase text-success fw-bold mb-2" style="font-size: 0.9rem;">Réponse</div>
+            <h3 class="h4 text-success">{{ currentCard.verso }}</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Actions en mode consultation -->
+      <div class="text-center mt-4">
+        <button v-if="remainingCards > 0" @click="exitReviewMode" class="btn btn-success px-4 me-2" aria-label="Continuer la révision">
+          <i class="bi bi-arrow-repeat me-2" aria-hidden="true"></i>Continuer la révision
+        </button>
+        <button @click="router.push('/')" class="btn btn-outline-secondary px-4" aria-label="Retour à l'accueil">
+          <i class="bi bi-house me-2" aria-hidden="true"></i>Retour à l'accueil
+        </button>
+      </div>
+    </div>
+
+    <div v-else-if="currentCard && !isFinished">
       <div class="mb-5">
         <h2 class="h3 fw-bold text-dark mb-3">Révision : {{ theme?.titre }}</h2>
         
@@ -224,51 +270,6 @@ function exitReviewMode() {
       </div>
     </div>
 
-    <!-- Mode Consultation -->
-    <div v-else-if="reviewMode && currentCard" class="review-mode">
-      <div class="mb-4">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-          <h2 class="h3 fw-bold text-dark mb-0">Consultation : {{ theme?.titre }}</h2>
-          <button @click="exitReviewMode" class="btn btn-sm btn-outline-secondary" aria-label="Fermer la consultation">
-            <i class="bi bi-x-lg" aria-hidden="true"></i> Fermer
-          </button>
-        </div>
-        
-        <div class="d-flex align-items-center gap-3 justify-content-center">
-          <button @click="prevCardInReview" :disabled="currentIndex === 0" class="btn btn-outline-primary" aria-label="Carte précédente">
-            <i class="bi bi-chevron-left" aria-hidden="true"></i>
-          </button>
-          <span class="fw-bold">{{ currentIndex + 1 }} / {{ allThemeCards.length }}</span>
-          <button @click="nextCardInReview" :disabled="currentIndex === allThemeCards.length - 1" class="btn btn-outline-primary" aria-label="Carte suivante">
-            <i class="bi bi-chevron-right" aria-hidden="true"></i>
-          </button>
-        </div>
-      </div>
-      
-      <div class="row justify-content-center">
-        <div class="col-md-8 col-lg-6">
-          <div class="card shadow-lg border-0 p-4">
-            <div class="mb-3">
-              <span class="badge bg-primary">Niveau {{ currentCard.niveau }}</span>
-            </div>
-            <div class="text-uppercase text-muted fw-bold mb-2" style="font-size: 0.9rem;">Question</div>
-            <h3 class="h4 mb-4">{{ currentCard.recto }}</h3>
-            <div class="text-uppercase text-success fw-bold mb-2" style="font-size: 0.9rem;">Réponse</div>
-            <h3 class="h4 text-success">{{ currentCard.verso }}</h3>
-          </div>
-        </div>
-      </div>
-
-      <!-- Actions en mode consultation -->
-      <div class="text-center mt-4">
-        <button v-if="remainingCards > 0" @click="exitReviewMode" class="btn btn-success px-4 me-2" aria-label="Continuer la révision">
-          <i class="bi bi-arrow-repeat me-2" aria-hidden="true"></i>Continuer la révision
-        </button>
-        <button @click="router.push('/')" class="btn btn-outline-secondary px-4" aria-label="Retour à l'accueil">
-          <i class="bi bi-house me-2" aria-hidden="true"></i>Retour à l'accueil
-        </button>
-      </div>
-    </div>
 
     <!-- Aucune carte à réviser -->
     <div v-else class="card bg-white mx-auto p-5 shadow-sm border-0" style="max-width: 600px;">
@@ -278,9 +279,6 @@ function exitReviewMode() {
       <h2 class="mb-3 fw-bold text-dark">Rien à réviser</h2>
       <p class="mb-4 text-muted">Toutes vos cartes sont à jour pour ce thème. Revenez demain !</p>
       <div class="d-flex gap-2 justify-content-center">
-        <button @click="startReviewMode" class="btn btn-outline-primary px-4" aria-label="Consulter les cartes">
-          <i class="bi bi-eye me-2" aria-hidden="true"></i>Consulter les cartes
-        </button>
         <RouterLink to="/" class="btn btn-primary px-4">Retour</RouterLink>
       </div>
     </div>

@@ -92,7 +92,7 @@ function cancelEditCard() {
       <!-- En-tête -->
       <div class="d-flex justify-content-between align-items-center mb-5 flex-wrap gap-3">
         <div class="d-flex align-items-center gap-3">
-          <RouterLink :to="{ name: 'category', params: { id: theme.categoryId } }" class="btn btn-white shadow-sm rounded-circle p-2 text-dark border-0" style="width: 40px; height: 40px; display: grid; place-items: center;" aria-label="Retour à la catégorie">
+          <RouterLink :to="{ name: 'category', params: { id: theme.categoryId } }" class="btn btn-light bg-white shadow-sm rounded-circle p-2 text-dark border-0" style="width: 40px; height: 40px; display: grid; place-items: center;" aria-label="Retour à la catégorie">
             <i class="bi bi-arrow-left" aria-hidden="true"></i>
           </RouterLink>
           <div>
@@ -244,12 +244,12 @@ function cancelEditCard() {
                 </div>
               </div>
 
-              <div v-if="editingCardId !== card.id" class="d-flex align-items-center gap-2">
+              <div v-if="editingCardId !== card.id" class="d-flex align-items-center gap-2 flex-shrink-0">
                 <span class="badge bg-light text-dark border me-2">Niv. {{ card.niveau }}</span>
-                <button @click="startEditCard(card.id, card.recto, card.verso)" class="btn btn-sm btn-primary fw-bold" aria-label="Modifier la carte">
+                <button @click="startEditCard(card.id, card.recto, card.verso)" class="btn btn-sm btn-primary fw-bold text-nowrap" aria-label="Modifier la carte">
                   <i class="bi bi-pencil me-1" aria-hidden="true"></i> Modifier
                 </button>
-                <button @click="store.deleteCard(card.id)" class="btn btn-sm btn-danger fw-bold" aria-label="Supprimer la carte">
+                <button @click="store.deleteCard(card.id)" class="btn btn-sm btn-danger fw-bold text-nowrap" aria-label="Supprimer la carte">
                   <i class="bi bi-x-circle me-1" aria-hidden="true"></i> Supprimer
                 </button>
               </div>
