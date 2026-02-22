@@ -444,11 +444,11 @@ L'application a été développée en respectant les critères WCAG 2.1 AA :
 |---|---|
 | ❌ Errors | **0** ✅ |
 | 🔴 Contrast Errors | **0** ✅ |
-| ⚠️ Alerts | **1** (lien redondant, mineur) |
+| ⚠️ Alerts | **0** ✅ |
 | ✅ Features | **1** |
 | 🏛️ Structure | **13** |
 | 🔵 ARIA | **34** |
-| **AIM Score** | **9.9 / 10** ✅ |
+| **AIM Score** | **10 / 10** ✅ |
 
 ### Rapport Lighthouse
 
