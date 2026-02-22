@@ -290,6 +290,8 @@ npm run storybook
 
 **Captures d'écran Storybook :**
 
+![Interface Storybook](./public/docs/storybook.png)
+
 | Story | Aperçu |
 |---|---|
 | `AppButton / Loading` | Bouton avec spinner de chargement |
