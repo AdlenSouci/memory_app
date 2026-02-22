@@ -246,10 +246,10 @@ function cancelEditCard() {
 
               <div v-if="editingCardId !== card.id" class="d-flex align-items-center gap-2">
                 <span class="badge bg-light text-dark border">Niv. {{ card.niveau }}</span>
-                <button @click="startEditCard(card.id, card.recto, card.verso)" class="btn btn-sm btn-light text-primary border" aria-label="Modifier la carte">
+                <button @click="startEditCard(card.id, card.recto, card.verso)" class="btn btn-sm btn-outline-primary" aria-label="Modifier la carte">
                   <i class="bi bi-pencil" aria-hidden="true"></i>
                 </button>
-                <button @click="store.deleteCard(card.id)" class="btn btn-sm btn-light text-danger border hover-danger" aria-label="Supprimer la carte">
+                <button @click="store.deleteCard(card.id)" class="btn btn-sm btn-outline-danger" aria-label="Supprimer la carte">
                   <i class="bi bi-trash" aria-hidden="true"></i>
                 </button>
               </div>
