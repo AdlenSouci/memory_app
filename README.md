@@ -1,6 +1,6 @@
 # 🧠 Memory App — Répétition Espacée
 
-🚀 **Application en ligne :** [https://memorygame-snowy-six.vercel.app](https://memorygame-snowy-six.vercel.app)
+🚀 **Application en ligne :** [https://memory-app-opal-eight.vercel.app](https://memory-app-opal-eight.vercel.app)
 
 Application web de mémorisation par **répétition espacée** (Spaced Repetition System). Créez des catégories, des thèmes et des flashcards, puis révisez-les avec un algorithme qui optimise votre apprentissage.
 
@@ -25,7 +25,7 @@ Application web de mémorisation par **répétition espacée** (Spaced Repetitio
 | Tests E2E Cypress — 6 parcours + 8 screenshots | ✅ Complet |
 | README avec 6 sections exigées | ✅ Complet |
 | Notifications quotidiennes *(optionnel)* | ❌ Non implémenté |
-| Publication / import en ligne *(optionnel)* | ❌ Non implémenté |
+| Publication / import en ligne *(optionnel)* | ✅ Déployé sur Vercel |
 
 ---
 
@@ -187,9 +187,7 @@ function importTestData() {
 }
 ```
 
-### Fonctionnalités optionnelles
-- ❌ Notifications quotidiennes (non implémenté)
-- ❌ Publication / import en ligne (non implémenté)
+
 
 ---
 
@@ -485,25 +483,6 @@ L'application est configurée comme une **Progressive Web App (PWA)**. Elle peut
 4. Actualisez la page : l'application fonctionne toujours depuis le cache local !
 
 
-**FunkyFy** (outil de visualisation d'accessibilité) :
-
-FunkyFy est un **bookmarklet** (favori spécial) qui surligne les éléments ARIA et accessibles directement sur la page.
-
-1. Aller sur [https://www.funkify.org/](https://www.funkify.org/) → cliquer sur **"Download"** → glisser le bookmarklet dans la barre de favoris Chrome/Firefox
-2. Ouvrir l'application : `http://localhost:5173`
-3. Cliquer sur le bookmarklet **FunkyFy** dans la barre de favoris
-4. Sélectionner un profil de simulation (ex : daltonisme, flou, dyslexie...)
-5. Capturer le rendu de la page avec le profil actif
-
-**Résultats obtenus :**
-
-Simulation **flou** (vision floue) :
-
-![FunkyFy test flou](./public/docs/funky_blur_test.png)
-
-Simulation **dyslexie** (vidéo) :
-
-[▶ Voir la vidéo - simulation dyslexie](./public/docs/video_funky_dys.mp4)
 
 
 **Lighthouse** (performance) :
