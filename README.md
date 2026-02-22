@@ -460,9 +460,20 @@ Le projet a été audité avec **Lighthouse** (Chrome DevTools) sur le build de 
 | ✅ Best Practices | **≥ 90** ✅ |
 | 🔍 SEO | **≥ 90** ✅ |
 
-> ⚠️ Les scores Lighthouse varient selon l'environnement. Les meilleurs résultats sont obtenus via **`npm run build` + `npm run preview`** (build de production). Le mode développement (`npm run dev`) peut afficher des scores plus faibles (~54) en raison des sourcemaps et des modules non optimisés — ce comportement est normal et attendu.
+> ⚠️ Les scores Lighthouse varient selon l'environnement. Les meilleurs résultats sont obtenus via la version en ligne hébergée sur Vercel. Le mode développement (`npm run dev`) peut afficher des scores plus faibles (~54) en raison des sourcemaps et des modules non optimisés — ce comportement est normal et attendu.
 
-![Rapport Lighthouse](./public/docs/lighthouse_rapport.png)
+![Rapport Lighthouse Vercel](./public/docs/site_heberger_perf.png)
+
+### FunkyFy (Simulation d'accessibilité)
+
+**FunkyFy** est une extension Google Chrome qui simule différents handicaps directement sur la page web.
+
+1. Installer l'extension **FunkyFy** sur Google Chrome
+2. Ouvrir l'application en ligne
+3. Activer l'extension et sélectionner un profil (ex: daltonisme, vision floue...)
+
+**Résultat obtenu (Simulation vision floue) :**
+![Test visuel FunkyFy avec filtre flou](./public/docs/funky_blur_test.png)
 
 ## 📡 Mode Hors-ligne (PWA)
 
