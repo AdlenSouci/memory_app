@@ -370,8 +370,9 @@ it('permet de faire une session de révision complète', () => {
   cy.screenshot('07-session-terminee')
 })
 ```
-
 **Résultat d'exécution :**
+
+![Preuve des tests Cypress](./public/docs/cypress_test.png)
 
 ```
 > vue_work@0.0.0 test:e2e
